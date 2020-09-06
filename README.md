@@ -7,6 +7,12 @@ Modules:
 * [os](os/) — functions to work with processes and files on different Operating Systems.
 * [android](android/) — functions to work with Android SDK Tools like adb, avdmanager, sdkmanager.
 
+## Changes in this fork
+
+This is a fork of [gojuno/commander](https://github.com/gojuno/commander). Changes in this fork compared to gojuno's version:
+
+- Windows support by using proper `Path.Separator 
+
 ### Download
 
 Commander is [available on jcenter](https://jcenter.bintray.com/com/gojuno/commander).
