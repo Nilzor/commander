@@ -15,11 +15,22 @@ This is a fork of [gojuno/commander](https://github.com/gojuno/commander). Chang
 
 ### Download
 
-Commander is [available on jcenter](https://jcenter.bintray.com/com/gojuno/commander).
+Commander is available on bintray. Add this repo to your gradle list:
 
 ```groovy
-compile 'com.gojuno.commander:os:some-version'
-compile 'com.gojuno.commander:android:some-version'
+     repositories {
+        // (other repos here)
+        maven {
+            url  "https://dl.bintray.com/nilzor/maven"
+        }
+    }
+```
+
+...then in your application
+
+```groovy
+compile 'com.nilzor.commander:os:0.2.1'
+compile 'com.nilzor.commander:android:0.2.1'
 ```
 
 All the releases and changelogs can be found on [Releases Page](https://github.com/gojuno/commander/releases).
