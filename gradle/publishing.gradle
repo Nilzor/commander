@@ -9,7 +9,7 @@ def gitTag() {
         throw new IllegalStateException("gitTag is accessed but commit has multiple tags: $tag")
     }
 
-    return tag
+    return tag.trim()
 }
 
 def projectVersion() {
@@ -20,7 +20,6 @@ def projectVersion() {
     } else if (tag.isEmpty()) {
         return "development"
     }
-
     return tag
 }
 
@@ -110,10 +109,10 @@ bintray {
             name = projectVersion()
             vcsTag = gitTag()
 
-            gpg {
-                sign = true
-                passphrase = System.getenv('BINTRAY_GPG_PASSPHRASE')
-            }
+           /* gpg {
+                sign = false
+                // passphrase = System.getenv('BINTRAY_GPG_PASSPHRASE')
+            }*/
         }
     }
 }
