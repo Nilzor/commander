@@ -44,9 +44,9 @@ def pomConfig = {
     }
     developers {
         developer {
-            id 'gojuno'
-            name 'Juno Inc.'
-            email 'opensource@gojuno.com'
+            id 'nilzor'
+            name 'Frode Nilsen'
+            email 'nilzor@gmail.com'
         }
     }
 }
@@ -78,7 +78,7 @@ publishing {
             artifact sourcesJar
             artifact javadocJar
 
-            groupId 'com.gojuno.commander'
+            groupId 'com.nilzor.commander'
             artifactId project.name
             version projectVersion()
 
@@ -86,7 +86,7 @@ publishing {
                 def root = asNode()
                 root.appendNode('description', project.description)
                 root.appendNode('name', project.name)
-                root.appendNode('url', 'https://github.com/gojuno/commander')
+                root.appendNode('url', 'https://github.com/nilzor/commander')
                 root.children().last() + pomConfig
             }
         }
@@ -102,8 +102,8 @@ bintray {
         repo = 'maven'
         name = 'commander'
         licenses = ['Apache-2.0']
-        vcsUrl = 'https://github.com/gojuno/commander.git'
-        issueTrackerUrl = 'https://github.com/gojuno/commander/issues'
+        vcsUrl = 'https://github.com/nilzor/commander.git'
+        issueTrackerUrl = 'https://github.com/nilzor/commander/issues'
         publications = ['CommanderPublication']
 
         version {
