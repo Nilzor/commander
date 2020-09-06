@@ -4,7 +4,7 @@ apply from: '../gradle/publishing.gradle'
 
 dependencies {
     implementation libraries.os
-    implementation libraries.kotlinStd
+    compileOnly libraries.kotlinStd
     implementation libraries.rxJava
 }
 
